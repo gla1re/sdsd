@@ -3,9 +3,7 @@ package com.builder.periphery.director;
 import com.builder.periphery.builder.PeripheryBuilder;
 import com.builder.periphery.model.PcPeripherySetup;
 
-/**
- * Director orchestrating common pre-configured peripheral setups.
- */
+
 public class PeripheryDirector {
 
     public PcPeripherySetup constructMinimalistOfficeSetup(PeripheryBuilder builder) {
