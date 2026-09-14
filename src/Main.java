@@ -9,19 +9,19 @@ public class Main {
     public static void main(String[] args) {
         PeripheryDirector director = new PeripheryDirector();
 
-        // 1. Build via Director (Esports Gaming Setup)
+       //(Esports Gaming Setup)
         PeripheryBuilder builder1 = new PcPeripheryBuilder();
         PcPeripherySetup esportsSetup = director.constructEsportsGamingSetup(builder1);
         System.out.println("=== DIRECTED BUILD: ESPORTS SETUP ===");
         System.out.println(esportsSetup);
 
-        // 2. Build via Director (Minimalist Office Setup)
+        //(Minimalist Office Setup)
         PeripheryBuilder builder2 = new PcPeripheryBuilder();
         PcPeripherySetup officeSetup = director.constructMinimalistOfficeSetup(builder2);
         System.out.println("=== DIRECTED BUILD: OFFICE SETUP ===");
         System.out.println(officeSetup);
 
-        // 3. Custom Build using Fluent API
+        //Custom Build 
         PcPeripherySetup customSetup = new PcPeripheryBuilder()
                 .setKeyboard("Custom Keychron Q1 Pro (Lubed Switches)")
                 .setMouse("Razer DeathAdder V3 Pro")
@@ -34,7 +34,7 @@ public class Main {
         System.out.println("=== CUSTOM FLUENT API BUILD ===");
         System.out.println(customSetup);
 
-        // 4. Testing Validation Rules (Triggers Exception)
+        //(Triggers Exception)
         System.out.println("=== TESTING VALIDATION EXCEPTION ===");
         try {
             new PcPeripheryBuilder()
