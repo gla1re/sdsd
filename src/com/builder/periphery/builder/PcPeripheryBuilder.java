@@ -2,9 +2,7 @@ package com.builder.periphery.builder;
 
 import com.builder.periphery.model.PcPeripherySetup;
 
-/**
- * Concrete Builder implementing method chaining and validated construction.
- */
+
 public class PcPeripheryBuilder implements PeripheryBuilder {
     private String keyboard;
     private String mouse;
