@@ -1,8 +1,6 @@
 package com.builder.periphery.model;
 
-/**
- * Product class representing a complete peripheral setup.
- */
+
 public class PcPeripherySetup {
     private final String keyboard;
     private final String mouse;
