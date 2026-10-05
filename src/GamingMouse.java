@@ -4,7 +4,7 @@ package pcperipherybuilder;
 public final class GamingMouse extends Peripheral {
     private final int dpi;
 
-    public GamingMouse(String model, int dpi, Connection connection) {
+    public GamingMouse(String model, int dpi, IConnection connection) {
         super(model, connection);
         if (dpi <= 0) {
             throw new IllegalArgumentException("DPI must be positive");

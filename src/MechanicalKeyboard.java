@@ -4,7 +4,7 @@ package pcperipherybuilder;
 public final class MechanicalKeyboard extends Peripheral {
     private final String switchType;
 
-    public MechanicalKeyboard(String model, String switchType, Connection connection) {
+    public MechanicalKeyboard(String model, String switchType, IConnection connection) {
         super(model, connection);
         this.switchType = requireText(switchType);
     }

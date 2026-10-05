@@ -4,7 +4,7 @@ package pcperipherybuilder;
 public final class Headset extends Peripheral {
     private final boolean surroundSound;
 
-    public Headset(String model, boolean surroundSound, Connection connection) {
+    public Headset(String model, boolean surroundSound, IConnection connection) {
         super(model, connection);
         this.surroundSound = surroundSound;
     }

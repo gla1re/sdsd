@@ -8,7 +8,7 @@ public abstract class Peripheral {
     private Connection connection;
     private boolean connected;
 
-    protected Peripheral(String model, Connection connection) {
+    protected Peripheral(String model, IConnection connection) {
         this.model = requireText(model);
         this.connection = Objects.requireNonNull(connection, "Connection is required");
     }

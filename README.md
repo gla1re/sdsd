@@ -33,7 +33,7 @@ On Linux/macOS: `bash run.sh`.
 | Concrete Implementors | UsbConnection, BluetoothConnection |
 | Client | Main |
 
-`Peripheral` holds a private reference to `Connection` and delegates `connect()` and `disconnect()` to it. Device subclasses only describe device properties. A mouse and a keyboard can each use either connection implementation; no UsbMouse or BluetoothKeyboard subclasses are needed.
+`Peripheral` holds a private reference to `IConnection` and delegates `connect()` and `disconnect()` to it. Device subclasses only describe device properties. A mouse and a keyboard can each use either connection implementation; no UsbMouse or BluetoothKeyboard subclasses are needed.
 
 The client constructs devices at runtime. It then calls `mouse.setConnection(new BluetoothConnection())` on the existing mouse. The old connection disconnects, the new connection connects, and `Same object: true` proves that the abstraction object was not replaced. A disconnected device stays disconnected when its implementation changes.
 

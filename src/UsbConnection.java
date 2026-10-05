@@ -1,7 +1,7 @@
 package pcperipherybuilder;
 
 /** Concrete Implementor: simulated USB transport. */
-public final class UsbConnection implements Connection {
+public final class UsbConnection implements IConnection {
     @Override
     public void connect(String deviceName) {
         System.out.println(deviceName + " connected via USB.");
