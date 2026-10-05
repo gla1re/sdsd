@@ -5,7 +5,7 @@ import java.util.Objects;
 /** Abstraction: device behavior delegates connection work to an Implementor. */
 public abstract class Peripheral {
     private final String model;
-    private Connection connection;
+    private IConnection connection;
     private boolean connected;
 
     protected Peripheral(String model, IConnection connection) {
@@ -35,7 +35,7 @@ public abstract class Peripheral {
     }
 
     /** Switch the same device; reconnect only if it was already connected. */
-    public final void setConnection(Connection newConnection) {
+    public final void setConnection(IConnection newConnection) {
         Objects.requireNonNull(newConnection, "Connection is required");
         if (connection == newConnection) {
             return;
